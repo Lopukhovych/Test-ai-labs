@@ -1,0 +1,217 @@
+"""
+Golden test dataset for RAG evaluation (Week 5).
+Documents referenced simulate an HR policy knowledge base.
+"""
+import json
+
+test_cases = [
+    # --- Vacation Policy ---
+    {
+        "id": 1,
+        "question": "How many vacation days do employees get after 2 years?",
+        "expected_answer": "20 days",
+        "relevant_doc": "vacation_policy.txt",
+        "difficulty": "easy",
+        "category": "vacation",
+    },
+    {
+        "id": 2,
+        "question": "When should I request vacation?",
+        "expected_answer": "At least 2 weeks in advance",
+        "relevant_doc": "vacation_policy.txt",
+        "difficulty": "easy",
+        "category": "vacation",
+    },
+    {
+        "id": 3,
+        "question": "How many vacation days do new employees receive in their first year?",
+        "expected_answer": "10 days",
+        "relevant_doc": "vacation_policy.txt",
+        "difficulty": "easy",
+        "category": "vacation",
+    },
+    {
+        "id": 4,
+        "question": "Can unused vacation days be carried over to the next year?",
+        "expected_answer": "Up to 5 days can be carried over",
+        "relevant_doc": "vacation_policy.txt",
+        "difficulty": "medium",
+        "category": "vacation",
+    },
+    {
+        "id": 5,
+        "question": "How do I submit a vacation request?",
+        "expected_answer": "Through the HR portal",
+        "relevant_doc": "vacation_policy.txt",
+        "difficulty": "easy",
+        "category": "vacation",
+    },
+
+    # --- Remote Work ---
+    {
+        "id": 6,
+        "question": "Can I work from home on Wednesday?",
+        "expected_answer": "No, Wednesday is a required office day",
+        "relevant_doc": "remote_work.txt",
+        "difficulty": "easy",
+        "category": "remote_work",
+    },
+    {
+        "id": 7,
+        "question": "How much is the home office equipment allowance?",
+        "expected_answer": "$500",
+        "relevant_doc": "remote_work.txt",
+        "difficulty": "easy",
+        "category": "remote_work",
+    },
+    {
+        "id": 8,
+        "question": "How many days per week can I work remotely?",
+        "expected_answer": "Up to 3 days per week",
+        "relevant_doc": "remote_work.txt",
+        "difficulty": "easy",
+        "category": "remote_work",
+    },
+    {
+        "id": 9,
+        "question": "Do I need manager approval to work from home?",
+        "expected_answer": "Yes, manager approval is required",
+        "relevant_doc": "remote_work.txt",
+        "difficulty": "medium",
+        "category": "remote_work",
+    },
+    {
+        "id": 10,
+        "question": "What internet speed is required for remote work?",
+        "expected_answer": "At least 25 Mbps",
+        "relevant_doc": "remote_work.txt",
+        "difficulty": "medium",
+        "category": "remote_work",
+    },
+
+    # --- Benefits ---
+    {
+        "id": 11,
+        "question": "What's the 401k match?",
+        "expected_answer": "4% company match",
+        "relevant_doc": "benefits.txt",
+        "difficulty": "easy",
+        "category": "benefits",
+    },
+    {
+        "id": 12,
+        "question": "When does 401k vesting begin?",
+        "expected_answer": "After 1 year of employment",
+        "relevant_doc": "benefits.txt",
+        "difficulty": "medium",
+        "category": "benefits",
+    },
+    {
+        "id": 13,
+        "question": "Does the company offer dental insurance?",
+        "expected_answer": "Yes, dental and vision are included",
+        "relevant_doc": "benefits.txt",
+        "difficulty": "easy",
+        "category": "benefits",
+    },
+    {
+        "id": 14,
+        "question": "Is there a gym or wellness stipend?",
+        "expected_answer": "$50 per month wellness stipend",
+        "relevant_doc": "benefits.txt",
+        "difficulty": "medium",
+        "category": "benefits",
+    },
+    {
+        "id": 15,
+        "question": "When can I enroll in health insurance?",
+        "expected_answer": "During open enrollment or within 30 days of hire",
+        "relevant_doc": "benefits.txt",
+        "difficulty": "medium",
+        "category": "benefits",
+    },
+
+    # --- Sick Leave ---
+    {
+        "id": 16,
+        "question": "How many sick days do employees get per year?",
+        "expected_answer": "10 sick days per year",
+        "relevant_doc": "sick_leave.txt",
+        "difficulty": "easy",
+        "category": "sick_leave",
+    },
+    {
+        "id": 17,
+        "question": "Do I need a doctor's note for sick leave?",
+        "expected_answer": "Required for absences longer than 3 consecutive days",
+        "relevant_doc": "sick_leave.txt",
+        "difficulty": "medium",
+        "category": "sick_leave",
+    },
+    {
+        "id": 18,
+        "question": "Can sick days be carried over?",
+        "expected_answer": "No, sick days do not carry over",
+        "relevant_doc": "sick_leave.txt",
+        "difficulty": "easy",
+        "category": "sick_leave",
+    },
+
+    # --- Performance Reviews ---
+    {
+        "id": 19,
+        "question": "How often are performance reviews conducted?",
+        "expected_answer": "Twice per year, in June and December",
+        "relevant_doc": "performance_review.txt",
+        "difficulty": "easy",
+        "category": "performance",
+    },
+    {
+        "id": 20,
+        "question": "Who conducts the performance review?",
+        "expected_answer": "Direct manager with HR oversight",
+        "relevant_doc": "performance_review.txt",
+        "difficulty": "easy",
+        "category": "performance",
+    },
+    {
+        "id": 21,
+        "question": "Are self-assessments part of the review process?",
+        "expected_answer": "Yes, employees complete a self-assessment before the manager review",
+        "relevant_doc": "performance_review.txt",
+        "difficulty": "medium",
+        "category": "performance",
+    },
+
+    # --- Edge Cases ---
+    {
+        "id": 22,
+        "question": "What happens to my benefits if I go on unpaid leave?",
+        "expected_answer": "Benefits continue for up to 3 months of unpaid leave",
+        "relevant_doc": "benefits.txt",
+        "difficulty": "hard",
+        "category": "benefits",
+    },
+    {
+        "id": 23,
+        "question": "Can I use vacation days and work from home on the same week?",
+        "expected_answer": "Yes, subject to manager approval and office day requirements",
+        "relevant_doc": "remote_work.txt",
+        "difficulty": "hard",
+        "category": "remote_work",
+    },
+    {
+        "id": 24,
+        "question": "How do vacation accrual rates change with seniority?",
+        "expected_answer": "10 days (year 1), 15 days (years 2-4), 20 days (5+ years)",
+        "relevant_doc": "vacation_policy.txt",
+        "difficulty": "hard",
+        "category": "vacation",
+    },
+]
+
+# Save
+with open("test_data.json", "w") as f:
+    json.dump(test_cases, f, indent=2)
+
+print(f"Created {len(test_cases)} test cases")

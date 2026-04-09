@@ -1,0 +1,12 @@
+[
+  {
+    "timestamp": "2026-04-08T20:32:41.844769",
+    "version": "v1.0",
+    "scores": {
+      "retrieval": 0.85,
+      "faithfulness": 0.9,
+      "correctness": 0.88,
+      "overall": 0.88
+    }
+  }
+]

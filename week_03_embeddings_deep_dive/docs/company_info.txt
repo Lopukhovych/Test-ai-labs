@@ -1,0 +1,51 @@
+COMPANY INFORMATION
+
+Company Name: TechCorp Inc.
+Founded: 2020
+Headquarters: San Francisco, CA
+Company Size: 150 employees (growing)
+Industry: Software Development & AI/ML Solutions
+Status: Series B funded startup
+
+Company Mission:
+To build intelligent AI-powered tools that make software developers more productive and enable them to build better applications faster. We believe AI should augment human creativity and skills.
+
+Core Values:
+- Innovation: We embrace new technologies and approaches
+- Collaboration: We work together across teams and departments
+- Transparency: Open communication and honest feedback
+- Quality: We maintain high standards in everything we do
+- Impact: We want our products to make a real difference
+
+Products:
+- AI-powered code completion and generation tools
+- Semantic search and knowledge management platform
+- Automated testing and quality assurance software
+- Machine learning model deployment platform
+
+Engineering Team:
+- 60+ software engineers and data scientists
+- Expertise in Python, JavaScript, Go, and Rust
+- ML/AI specialization in embeddings, transformers, and LLMs
+- Infrastructure team managing cloud and DevOps
+
+Company Culture:
+- Casual dress code and flexible work environment
+- Monthly all-hands meetings and town halls
+- Team building events and social activities
+- Diverse and inclusive workplace
+- Strong focus on work-life balance
+
+Office Location:
+- Primary office in downtown San Francisco
+- Modern open floor plan with collaboration spaces
+- Game room, gym, and relaxation areas
+- Easy public transportation access
+- Accessible building with ample parking
+
+Technology Stack:
+- Python for backend and ML/AI work
+- React and TypeScript for frontend
+- PostgreSQL and Redis for data storage
+- AWS for cloud infrastructure
+- Docker and Kubernetes for containerization
