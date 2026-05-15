@@ -1,0 +1,28 @@
+{
+  "python-guide": {
+    "doc_id": "python-guide",
+    "current_version": 2,
+    "current_hash": "f36e553ad99cbdaf2341f23ff0545aa08b97676e380ba826ae79e27f6e004adb",
+    "current_chunk_ids": [
+      "136bf965-123a-5e31-a6f8-28ad8b894968"
+    ],
+    "indexed_at": "2026-04-10T06:15:58.896208+00:00",
+    "metadata": {
+      "source": "guide",
+      "author": "team",
+      "revision": 2
+    },
+    "version_history": []
+  },
+  "ml-intro": {
+    "doc_id": "ml-intro",
+    "current_version": 1,
+    "current_hash": "e112723e68bbf038db23cdd6f6243e7458f75f1b227099800b4ea003e55578c3",
+    "current_chunk_ids": [
+      "394c4af3-62be-5d3f-838d-3d3393a721d1"
+    ],
+    "indexed_at": "2026-04-10T06:15:58.696141+00:00",
+    "metadata": {},
+    "version_history": []
+  }
+}

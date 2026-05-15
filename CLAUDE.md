@@ -9,6 +9,7 @@ This is a structured AI/ML learning project organized by topic/week. The codebas
 - **Week 02** (`week_02_rag_introduction`): RAG introduction (minimal content currently)
 - **Week 03** (`week_03_embeddings_deep_dive`): Embeddings and semantic search (text-embedding-3-small, RAG pattern, similarity matching)
 - **Week 05** (`week_05_evaluations`): LLM evaluation frameworks (faithfulness, regression testing, RAG evaluation)
+- **Week 07** (`week_07_agent`): ReAct agent pattern (Thought → Action → Observation loop, tool dispatch)
 
 ## Common Development Commands
 
@@ -94,7 +95,7 @@ from dataclasses import dataclass
 ## File Organization
 
 ```
-week_01/  - LLM interactions & prompting
+week_01_fundamentals/  - LLM interactions & prompting
   ├── first_call.py              # Basic API call
   ├── chatbot_class.py           # Reusable Chatbot class
   ├── cli_chat.py                # Interactive CLI chat
@@ -109,7 +110,9 @@ week_01/  - LLM interactions & prompting
   ├── personalities.py           # Custom system prompts
   └── human_in_loop.py           # Human feedback in loop
 
-week_03/  - Embeddings & semantic search
+week_02_rag_introduction/  - RAG introduction (minimal content)
+
+week_03_embeddings_deep_dive/  - Embeddings & semantic search
   ├── first_embedding.py         # Basic embedding call
   ├── similarity.py              # Cosine similarity examples
   ├── compare_models.py          # Compare embedding models
@@ -118,6 +121,16 @@ week_03/  - Embeddings & semantic search
   ├── batch_embeddings.py        # Efficient batch embedding
   ├── challenges.py              # Practice exercises
   └── docs/                      # Sample documents for RAG
+
+week_05_evaluations/  - LLM evaluation frameworks
+  ├── simple_eval.py             # Basic evaluation patterns
+  ├── test_dataset.py            # Test dataset construction
+  ├── faithfulness_eval.py       # Faithfulness metric evaluation
+  ├── rag_evaluator.py           # RAG pipeline evaluation
+  ├── regression_test.py         # Regression testing for LLM outputs
+  ├── run_evaluation.py          # Orchestrate evaluation runs
+  ├── test_data.json             # Evaluation test data
+  └── eval_history.json          # Persisted evaluation results
 ```
 
 ## Notes for Future Development
@@ -125,5 +138,5 @@ week_03/  - Embeddings & semantic search
 - **API costs**: Embeddings and chat completions incur costs. Be mindful of repeated calls during development.
 - **Rate limiting**: OpenAI API has rate limits. Week 03's batch_embeddings.py implements efficient batching.
 - **Example code**: All scripts can be run directly and contain working examples; modify the test code at the bottom to experiment.
-- **Import paths**: Files in week_01 can be imported by week_03 (e.g., `from week_01.chatbot_class import Chatbot`) since week_01 contains reusable classes.
+- **Import paths**: Files in week_01_fundamentals can be imported by other weeks (e.g., `from week_01_fundamentals.chatbot_class import Chatbot`) since it contains reusable classes.
 - **Environment**: Ensure `.env` is in the root directory and contains a valid `OPENAI_API_KEY`.
